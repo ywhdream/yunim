@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2022 NetEase, Inc. All rights reserved.
+  ~ Use of this source code is governed by a MIT license that can be
+  ~ found in the LICENSE file.
+  -->
+
+<resources>
+    <declare-styleable name="PhotoView">
+        <attr name="photo_crop_width" format="dimension" />
+        <attr name="photo_crop_dim_color" format="color" />
+        <attr name="photo_crop_highlight_color" format="color" />
+        <attr name="photo_crop_stroke_width" format="dimension" />
+    </declare-styleable>
+
+
+    <declare-styleable name="PulsingRingView">
+        <attr name="ringColor" format="color|reference" />
+        <attr name="ringWidth" format="dimension|reference" />
+        <attr name="ringBreathingWidth" format="dimension|reference" />
+        <attr name="ringBreathingWidthMode" format="integer|reference" />
+        <attr name="ringIdleSizeRatio" format="float|reference" />
+        <attr name="ringPulsingSizeMinRatio" format="float|reference" />
+        <attr name="ringPulsingSizeMaxRatio" format="float|reference" />
+        <attr name="ringPulsingAnimDuration" format="integer|reference" />
+        <attr name="ringAnimInterpolator" format="flags">
+            <flag name="accelerate" value="0" />
+            <flag name="accelerate_decelerate" value="1" />
+            <flag name="anticipate" value="2" />
+            <flag name="anticipate_overshoot" value="3" />
+            <flag name="bounce" value="4" />
+            <flag name="decelerate" value="5" />
+            <flag name="linear" value="6" />
+            <flag name="overshoot" value="7" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="UserAvatarView">
+        <attr name="useFrameHolder" format="boolean" />
+    </declare-styleable>
+    <!--有按下效果的Imageview-->
+    <declare-styleable name="FilterImageView">
+        <attr name="pressColor" format="reference|color" />
+        <attr name="pressShape">
+            <enum name="square" value="0" />
+            <enum name="circle" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="LinkBuilder">
+        <attr name="defaultLinkColor" format="color" />
+        <attr name="defaultTextColorOfHighlightedLink" format="color" />
+    </declare-styleable>
+
+    <attr name="linkBuilderStyle" format="reference" />
+
+</resources>

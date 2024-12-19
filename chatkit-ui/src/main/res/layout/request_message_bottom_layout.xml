@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/textMessageLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_ffffff"
+    android:paddingTop="@dimen/dimen_8_dp"
+    android:paddingBottom="@dimen/dimen_8_dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/btn_chat_more"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/transparent"
+        android:contentDescription="@string/empty"
+        android:scaleType="center"
+        android:src="@drawable/chat_bottom_more"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/textlayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/sendLayout"
+        app:layout_constraintStart_toEndOf="@+id/btn_chat_more">
+
+
+        <LinearLayout
+            android:id="@+id/message_activity_input_box_layout_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_10_dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_chat_white_curve_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <EditText
+                    android:id="@+id/chatMessageInputEt"
+                    style="@style/edit_text_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_10_dp"
+                    android:layout_marginEnd="@dimen/dimen_10_dp"
+                    android:layout_weight="1"
+                    android:autoLink="web|email|phone"
+                    android:background="@null"
+                    android:hint="@string/chatroom_enter_message"
+                    android:maxLines="4"
+                    android:minHeight="40dp"
+                    android:padding="@dimen/dimen_5_dp"
+                    android:textColor="@color/black"
+                    android:textCursorDrawable="@null"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/sendLayout"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignBottom="@id/textlayout"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/dimen_6_dp"
+        android:layout_marginBottom="4.5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textlayout">
+
+
+        <ImageButton
+            android:id="@+id/buttonSendMessage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_send_red"
+            android:enabled="true"
+            android:gravity="center"
+            android:scaleType="centerCrop"
+            android:text="@string/send"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/text_size_14" />
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

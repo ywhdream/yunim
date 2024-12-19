@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/messageActivityBottomLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_secretChatInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_margin="4dp"
+        android:textColor="#ff334c"
+        android:textSize="10sp"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/messageDeleteLayout"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/delete_main_msg_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/nim_message_view_bottom"
+            android:gravity="center_vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+
+            <LinearLayout
+                android:id="@+id/delete_msg_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/delete_msg_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:paddingLeft="@dimen/dimen_16_dp"
+                    android:paddingRight="@dimen/dimen_16_dp"
+                    app:srcCompat="@drawable/ic_delete_enable" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/delete_quantity_selected"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="@color/black" />
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/messageForwardLayout"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/forward_main_msg_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/nim_message_view_bottom"
+            android:gravity="center_vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+
+            <LinearLayout
+                android:id="@+id/forward_msg_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/forward_msg_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:paddingLeft="@dimen/dimen_16_dp"
+                    android:paddingRight="@dimen/dimen_16_dp"
+                    app:srcCompat="@drawable/ic_forward_enable" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/forward_quantity_selected"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="@color/black" />
+
+        </RelativeLayout>
+    </FrameLayout>
+
+    <include layout="@layout/nim_message_activity_text_layout" />
+
+    <!-- Not a Group member -->
+    <LinearLayout
+        android:id="@+id/not_group_member_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_warning_top_color"
+        android:orientation="vertical"
+        android:padding="@dimen/dimen_16_dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/team_no_longer_in_group"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+<!--    <com.netease.yunxin.kit.chatkit.ui.view.InputBottomPanel-->
+<!--        android:id="@+id/input_bottom_panel"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content" />-->
+
+<!--    <com.netease.yunxin.kit.chatkit.ui.view.EmoticonPickerView-->
+<!--        android:id="@+id/emoticon_picker_view"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:visibility="gone" />-->
+
+</LinearLayout>

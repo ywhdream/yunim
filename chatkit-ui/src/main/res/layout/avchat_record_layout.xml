@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/avchat_record_bg"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/avchat_record_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/avchat_recording"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/avchat_record_warning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/avchat_record_tip"
+        android:layout_centerHorizontal="true"
+        android:text="@string/avchat_phone_memory_less_20M"
+        android:textColor="@color/color_red_f04c62"
+        android:visibility="gone" />
+
+</RelativeLayout>

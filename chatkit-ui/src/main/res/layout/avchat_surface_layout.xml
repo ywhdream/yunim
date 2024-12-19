@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <com.netease.lava.nertc.sdk.video.NERtcVideoView
+        android:id="@+id/render_remote_user"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible" />
+
+
+    <View
+        android:id="@+id/touch_zone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/notificationLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:shadowColor="@color/video_call_peer_close_cameral_text_shadow"
+        android:shadowDy="1"
+        android:shadowRadius="1"
+        android:textColor="@color/video_call_peer_close_cameral_text_color"
+        android:textSize="16sp" />
+
+
+    <FrameLayout
+        android:id="@+id/small_size_preview_layout"
+        android:layout_width="64dp"
+        android:layout_height="98dp"
+        android:layout_gravity="right|top"
+        android:layout_marginTop="130dp"
+        android:layout_marginRight="16dp">
+
+        <com.netease.lava.nertc.sdk.video.NERtcVideoView
+            android:id="@+id/render_local_user"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/smallSizePreviewCoverImg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/avchat_close_video_send"
+            android:visibility="gone" />
+    </FrameLayout>
+
+
+</FrameLayout>

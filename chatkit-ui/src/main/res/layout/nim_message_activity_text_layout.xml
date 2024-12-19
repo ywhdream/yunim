@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/textMessageLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_ffffff">
+
+    <FrameLayout
+        android:id="@+id/sendLayout"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignBottom="@id/textlayout"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/dimen_6_dp"
+        android:layout_marginBottom="12.5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textlayout">
+
+
+        <ImageButton
+            android:id="@+id/buttonSendMessage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:enabled="true"
+            android:gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_send_red"
+            android:text="@string/send"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_14"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <ImageButton
+            android:id="@+id/buttonAudioMessage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:contentDescription="@string/empty"
+            android:src="@drawable/chat_bottom_mic"
+            android:visibility="gone"
+            tools:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/buttonTextMessage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:contentDescription="@string/empty"
+            android:src="@drawable/chat_bottom_keyboard_icon"
+            android:visibility="gone"
+            tools:visibility="gone" />
+
+    </FrameLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/textlayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:minHeight="40dp"
+        android:paddingTop="@dimen/dimen_8_dp"
+        android:paddingBottom="@dimen/dimen_8_dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/sendLayout"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/btn_chat_more"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/transparent"
+            android:contentDescription="@string/empty"
+            android:scaleType="center"
+            android:src="@drawable/chat_bottom_more"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <RelativeLayout
+            android:id="@+id/message_activity_input_box_layout_wrapper"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_chat_more">
+
+            <LinearLayout
+                android:id="@+id/input_box_layout_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_chat_white_curve_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/timer_button"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/transparent"
+                    android:contentDescription="@string/empty"
+                    android:scaleType="center"
+                    android:src="@drawable/icons_chattimer_black"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                <EditText
+                    android:id="@+id/editTextMessage"
+                    style="@style/edit_text_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="@dimen/dimen_10_dp"
+                    android:layout_weight="1"
+                    android:autoLink="web|email|phone"
+                    android:background="@null"
+                    android:hint="@string/chatroom_enter_message"
+                    android:maxLines="4"
+                    android:minHeight="40dp"
+                    android:padding="@dimen/dimen_5_dp"
+                    android:textColorHint="@color/gray_808080"
+                    android:textCursorDrawable="@null"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/emoji_button"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginEnd="@dimen/dimen_5_dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/transparent"
+                    android:contentDescription="@string/empty"
+                    android:scaleType="center"
+                    android:src="@drawable/chat_bottom_emoji" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/input_box_layout_audio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_chat_white_curve_bg"
+                android:clickable="true"
+                android:gravity="center"
+                android:minHeight="40dp"
+                android:orientation="horizontal"
+                android:padding="@dimen/dimen_5_dp"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+
+<!--                <com.netease.yunxin.kit.chatkit.ui.view.RecordVoiceButton-->
+<!--                    android:id="@+id/recordVoiceButton"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text="@string/input_panel_hold_talk"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="16sp" />-->
+
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
