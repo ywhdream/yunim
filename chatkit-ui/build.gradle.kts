@@ -6,6 +6,7 @@
 plugins {
     id("com.android.library")
     kotlin("android")
+    id("maven-publish")
 }
 
 android {
@@ -62,7 +63,7 @@ dependencies {
     implementation("com.github.bumptech.glide:glide:4.13.1")
     implementation("com.alibaba:fastjson:1.2.48")
     implementation("io.reactivex.rxjava3:rxjava:3.0.4")
-    implementation ("androidx.databinding:databinding-runtime:4.2.0")
+    implementation("androidx.databinding:databinding-runtime:4.2.0")
 
 
     /**  音视频2.0**/
@@ -72,3 +73,17 @@ dependencies {
 
 }
 
+afterEvaluate {
+    publishing {
+        publications {
+            // Creates a Maven publication called "release".
+            register<MavenPublication>("release") {
+                // 从 components.release 获取组件
+                from(components["release"])
+                groupId = "com.github.ywhdream"
+                artifactId = "im"
+                version = "1.0"
+            }
+        }
+    }
+}
