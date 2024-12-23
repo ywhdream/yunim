@@ -6,7 +6,6 @@
 plugins {
     id("com.android.library")
     kotlin("android")
-//    id("maven-publish")
     `maven-publish`
 }
 
@@ -37,15 +36,31 @@ android {
     dataBinding {
         enable = true
     }
-//    kotlinOptions {
-//        jvmTarget = "1.8"
-//    }
+    kotlinOptions {
+        jvmTarget = "11"
+    }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
 
     sourceSets["main"].res.srcDirs("src/main/res", "src/main/res-fun", "src/main/res-normal")
+}
+afterEvaluate {
+    publishing {
+        publications {
+            // 创建一个名为 "release" 的 Maven publication
+            register<MavenPublication>("release") {
+                // 从 components["android"] 获取组件，确保 "android" 组件存在
+                from(components["release"])
+
+                // 设置 groupId, artifactId, version
+                groupId = "com.github.ywhdream"
+                artifactId = "yunim"
+                version = "1.0.7"
+            }
+        }
+    }
 }
 
 dependencies {
@@ -76,28 +91,3 @@ dependencies {
 
 }
 
-afterEvaluate {
-//    publishing {
-//        publications {
-//            create<MavenPublication>("mavenJava") {
-//                from(components["java"])
-//                groupId = "com.github.ywhdream"
-//                artifactId = "im"
-//                version = "1.0.7"
-//            }
-//        }
-//    }
-
-    publishing {
-        publications {
-            // Creates a Maven publication called "release".
-            register<MavenPublication>("release") {
-                // 从 components.release 获取组件
-                from(components["release"])
-                groupId = "com.github.ywhdream"
-                artifactId = "yunim"
-                version = "1.1.4"
-            }
-        }
-    }
-}
