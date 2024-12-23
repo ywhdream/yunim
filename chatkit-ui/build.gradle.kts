@@ -36,12 +36,12 @@ android {
     dataBinding {
         enable = true
     }
-    kotlinOptions {
-        jvmTarget = "1.8"
-    }
+//    kotlinOptions {
+//        jvmTarget = "1.8"
+//    }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
 
     sourceSets["main"].res.srcDirs("src/main/res", "src/main/res-fun", "src/main/res-normal")
@@ -95,7 +95,7 @@ afterEvaluate {
                 from(components["release"])
                 groupId = "com.github.ywhdream"
                 artifactId = "yunim"
-                version = "1.1.2"
+                version = "1.1.3"
             }
         }
     }
