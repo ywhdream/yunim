@@ -1,21 +1,11 @@
 pluginManagement {
     repositories {
         maven { url 'https://jitpack.io' }
-
-        gradlePluginPortal()
+        jcenter()
+        mavenLocal()
         google()
         mavenCentral()
-        maven {
-            setUrl("https://oss.sonatype.org/content/repositories/snapshots/")
-        }
-        maven {
-            setUrl("https://developer.huawei.com/repo/")
-        }
-        maven { setUrl("https://jitpack.io") }
-
-        maven { setUrl("https://maven.aliyun.com/repository/google")}
-        maven { setUrl("https://maven.aliyun.com/repository/public") }
-        maven { setUrl("https://maven.aliyun.com/repository/gradle-plugin")}
+        gradlePluginPortal()
 
 
     }
@@ -24,20 +14,11 @@ dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         maven { url 'https://jitpack.io' }
-
+        jcenter()
+        mavenLocal()
         google()
         mavenCentral()
-        maven {
-            setUrl("https://oss.sonatype.org/content/repositories/snapshots/")
-        }
-        maven {
-            setUrl("https://developer.huawei.com/repo/")
-        }
-        maven { setUrl("https://jitpack.io") }
-
-        maven { setUrl("https://maven.aliyun.com/repository/google")}
-        maven { setUrl("https://maven.aliyun.com/repository/public") }
-        maven { setUrl("https://maven.aliyun.com/repository/gradle-plugin")}
+        gradlePluginPortal()
 
     }
 }
