@@ -57,7 +57,7 @@ afterEvaluate {
                 // 设置 groupId, artifactId, version
                 groupId = "com.github.ywhdream"
                 artifactId = "yunim"
-                version = "1.0.7"
+                version = "1.1.7"
             }
         }
     }
