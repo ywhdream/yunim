@@ -76,14 +76,25 @@ dependencies {
 afterEvaluate {
     publishing {
         publications {
-            // Creates a Maven publication called "release".
-            register<MavenPublication>("release") {
-                // 从 components.release 获取组件
-                from(components["release"])
+            create<MavenPublication>("mavenJava") {
+                from(components["java"])
                 groupId = "com.github.ywhdream"
                 artifactId = "im"
-                version = "1.0.2"
+                version = "1.0.7"
             }
         }
     }
+
+//    publishing {
+//        publications {
+//            // Creates a Maven publication called "release".
+//            register<MavenPublication>("release") {
+//                // 从 components.release 获取组件
+//                from(components["release"])
+//                groupId = "com.github.ywhdream"
+//                artifactId = "im"
+//                version = "1.0.2"
+//            }
+//        }
+//    }
 }
