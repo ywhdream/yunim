@@ -96,7 +96,7 @@ afterEvaluate {
                 from(components["release"])
                 groupId = "com.github.ywhdream"
                 artifactId = "yunim"
-                version = "1.1.3"
+                version = "1.1.4"
             }
         }
     }
