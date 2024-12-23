@@ -94,8 +94,8 @@ afterEvaluate {
                 // 从 components.release 获取组件
                 from(components["release"])
                 groupId = "com.github.ywhdream"
-                artifactId = "im"
-                version = "1.1.1"
+                artifactId = "yunim"
+                version = "1.1.2"
             }
         }
     }
