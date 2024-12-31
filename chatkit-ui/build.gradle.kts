@@ -27,15 +27,18 @@ android {
             )
         }
     }
-
     buildFeatures {
-        viewBinding = true
-        buildConfig = true
+        dataBinding = true
+    }
 
-    }
-    dataBinding {
-        enable = true
-    }
+//    buildFeatures {
+//        viewBinding = true
+//        buildConfig = true
+//
+//    }
+//    dataBinding {
+//        enable = true
+//    }
     kotlinOptions {
         jvmTarget = "11"
     }
@@ -57,7 +60,7 @@ afterEvaluate {
                 // 设置 groupId, artifactId, version
                 groupId = "com.github.ywhdream"
                 artifactId = "yunim"
-                version = "1.1.9"
+                version = "1.1.10"
             }
         }
     }
