@@ -53,7 +53,6 @@ import com.netease.nimlib.sdk.v2.avsignalling.params.V2NIMSignallingCallParams
 import com.netease.nimlib.sdk.v2.avsignalling.params.V2NIMSignallingCallSetupParams
 import com.netease.nimlib.sdk.v2.avsignalling.params.V2NIMSignallingCancelInviteParams
 import com.netease.nimlib.sdk.v2.avsignalling.params.V2NIMSignallingRejectInviteParams
-import com.netease.nimlib.sdk.v2.user.V2NIMUser
 import com.netease.nimlib.sdk.v2.user.V2NIMUserService
 import com.netease.yunxin.kit.chatkit.ui.R
 import com.netease.yunxin.kit.chatkit.ui.constant.Constant.CALLEE_ACCOUNT_ID
@@ -69,8 +68,8 @@ import com.netease.yunxin.kit.chatkit.ui.model.NimCallTypeReq
 import com.netease.yunxin.kit.chatkit.ui.model.NimVideoConstant
 import com.netease.yunxin.kit.chatkit.ui.notification.AVChatNotification
 import com.netease.yunxin.kit.chatkit.ui.permission.BaseMPermission
-import com.netease.yunxin.kit.chatkit.ui.permission.GlobalPermissionUtils
-import com.netease.yunxin.kit.chatkit.ui.permission.GlobalPermissionUtils.Companion.permissionCamera
+import com.netease.yunxin.kit.chatkit.ui.permission.IMGlobalPermissionUtils
+import com.netease.yunxin.kit.chatkit.ui.permission.IMGlobalPermissionUtils.Companion.permissionCamera
 import com.netease.yunxin.kit.chatkit.ui.permission.MPermission
 import com.netease.yunxin.kit.chatkit.ui.permission.getPermissionPurposeLinks
 import com.netease.yunxin.kit.chatkit.ui.util.AVChatProfile
@@ -1437,7 +1436,7 @@ class AVChatActivity : BaseActivity(), View.OnClickListener, ToggleListener,
             applicationContext
         )
         if (missedPermissions.isNotEmpty()) {
-            GlobalPermissionUtils.requestPermissionsWithDescriptionDialog(
+            IMGlobalPermissionUtils.requestPermissionsWithDescriptionDialog(
                 this, getPermissionPurposeLinks(
                     this
                 ), permissionCamera, null, object : DialogHelper.DialogListener {

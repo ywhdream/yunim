@@ -9,7 +9,6 @@ import android.content.pm.PackageManager
 import android.os.Build
 import android.view.View
 import androidx.annotation.RequiresApi
-import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
@@ -22,7 +21,7 @@ import com.netease.yunxin.kit.chatkit.ui.view.DialogHelper
 import com.tbruyelle.rxpermissions3.Permission
 import com.tbruyelle.rxpermissions3.RxPermissions
 
-open class GlobalPermissionUtils {
+open class IMGlobalPermissionUtils {
     companion object {
         var permissionCallbackListener: PermissionCallbackListener? = null
 
