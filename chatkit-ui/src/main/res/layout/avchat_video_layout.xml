@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <com.netease.yunxin.kit.chatkit.ui.view.UserAvatarView
+            <com.netease.yunxin.kit.chatkit.ui.view.IMUserAvatarView
                 android:id="@+id/avchat_video_head"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"

@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:layout_gravity="center">
 
-    <com.netease.yunxin.kit.chatkit.ui.view.PulsingRingView
+    <com.netease.yunxin.kit.chatkit.ui.view.IMPulsingRingView
         android:id="@+id/view_pulsing_bg"
         android:layout_width="0dp"
         android:layout_height="0dp"

@@ -14,7 +14,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import com.netease.yunxin.kit.chatkit.ui.R
 
 
-class UserAvatarView @JvmOverloads constructor(
+class IMUserAvatarView @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     @AttrRes defStyleAttr: Int = 0
@@ -30,7 +30,7 @@ class UserAvatarView @JvmOverloads constructor(
         private set
     lateinit var ivBadge: AppCompatImageView
         private set
-    lateinit var viewPulsingRingView: PulsingRingView
+    lateinit var viewPulsingRingView: IMPulsingRingView
         private set
 
     var useFrameHolder = false
@@ -48,7 +48,7 @@ class UserAvatarView @JvmOverloads constructor(
         viewPulsingRingView.ringColor = ringColor ?: Color.TRANSPARENT
     }
 
-    fun setPulsingRingMode(mode: PulsingRingView.State) {
+    fun setPulsingRingMode(mode: IMPulsingRingView.State) {
         viewPulsingRingView.state = mode
     }
 

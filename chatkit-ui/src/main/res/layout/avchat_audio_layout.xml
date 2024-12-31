@@ -44,7 +44,7 @@
             android:textColor="@color/white"
             android:textSize="18sp"/>
 
-        <com.netease.yunxin.kit.chatkit.ui.view.UserAvatarView
+        <com.netease.yunxin.kit.chatkit.ui.view.IMUserAvatarView
             android:id="@+id/avchat_audio_head"
             android:layout_width="100dp"
             android:layout_height="wrap_content"

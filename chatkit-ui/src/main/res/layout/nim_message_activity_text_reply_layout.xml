@@ -75,7 +75,7 @@
             android:src="@drawable/nim_play_btn_select"
             android:visibility="visible" />
 
-        <com.netease.yunxin.kit.chatkit.ui.view.UserAvatarView
+        <com.netease.yunxin.kit.chatkit.ui.view.IMUserAvatarView
             android:id="@+id/ivReplyMsgInputImageHeader"
             android:layout_width="38dp"
             android:layout_height="wrap_content"

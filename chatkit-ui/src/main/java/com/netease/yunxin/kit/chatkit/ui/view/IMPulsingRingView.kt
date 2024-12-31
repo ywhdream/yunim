@@ -15,7 +15,7 @@ import androidx.annotation.AttrRes
 import androidx.annotation.ColorInt
 import com.netease.yunxin.kit.chatkit.ui.R
 
-class PulsingRingView @JvmOverloads constructor(
+class IMPulsingRingView @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     @AttrRes defStyleAttr: Int = 0
