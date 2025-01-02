@@ -61,7 +61,7 @@ class IMUserAvatarView @JvmOverloads constructor(
     }
 
     private fun init(attrs: AttributeSet?) {
-        LayoutInflater.from(context).inflate(R.layout.view_user_avater, this)
+        LayoutInflater.from(context).inflate(R.layout.im_view_user_avater, this)
         bindView()
         fetchViewAttributes(attrs)
     }
