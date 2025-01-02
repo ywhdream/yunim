@@ -24,7 +24,7 @@ class IMUserAvatarView @JvmOverloads constructor(
         private const val avatarToVerifyRatio = .375f
     }
 
-    lateinit var ivAvatar: FilterImageView
+    lateinit var ivAvatar: IMFilterImageView
         private set
     lateinit var ivVerify: AppCompatImageView
         private set

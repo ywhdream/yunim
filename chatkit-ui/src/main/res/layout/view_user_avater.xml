@@ -16,7 +16,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:ringBreathingWidth="1.5dp" />
 
-    <com.netease.yunxin.kit.chatkit.ui.view.FilterImageView
+    <com.netease.yunxin.kit.chatkit.ui.view.IMFilterImageView
         android:id="@+id/iv_avatar"
         android:layout_width="0dp"
         android:layout_height="0dp"

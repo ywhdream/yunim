@@ -21,7 +21,7 @@ import com.netease.yunxin.kit.chatkit.ui.R;
  * @Date 2017/2/29
  * @Contact master.jungle68@gmail.com
  */
-public class FilterImageView extends AppCompatImageView {
+public class IMFilterImageView extends AppCompatImageView {
     private static final int SHAPE_SQUARE = 0;
     private static final int SHAPE_CIRLCE = 1;
     private static final int DEFAULT_PRESSED_COLOR = 0x26000000; // cover：#000000 alpha 15%
@@ -41,17 +41,17 @@ public class FilterImageView extends AppCompatImageView {
     private String imgUrl;
 
 
-    public FilterImageView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public IMFilterImageView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         initAttrs(context, attrs);
     }
 
 
-    public FilterImageView(Context context, AttributeSet attrs) {
+    public IMFilterImageView(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public FilterImageView(Context context) {
+    public IMFilterImageView(Context context) {
         this(context, null);
     }
 
