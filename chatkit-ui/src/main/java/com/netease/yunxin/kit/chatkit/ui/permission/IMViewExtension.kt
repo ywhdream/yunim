@@ -9,11 +9,9 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.core.content.ContextCompat
-import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.netease.yunxin.kit.chatkit.ui.R
-import com.netease.yunxin.kit.chatkit.ui.databinding.DialogPermissionPurposeInformationBinding
 import com.netease.yunxin.kit.chatkit.ui.util.ConvertUtils
 import com.netease.yunxin.kit.chatkit.ui.util.DeviceUtils
 import com.netease.yunxin.kit.chatkit.ui.view.DialogHelper
@@ -32,8 +30,7 @@ fun showPermissionsPurposeDialog(
     dialogListener: DialogHelper.DialogListener?,
     agreeClickListener: View.OnClickListener?,
 ) {
-//    val inflater: LayoutInflater = mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-//    val dialogView: DialogPermissionPurposeInformationBinding = DialogPermissionPurposeInformationBinding.inflate(inflater)
+
     val inflater: LayoutInflater =
         mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
     val dialogView: View = inflater.inflate(R.layout.dialog_permission_purpose_information, null)
